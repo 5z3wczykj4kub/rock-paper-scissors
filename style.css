@@ -10,11 +10,39 @@ body {
     font-family: sans-serif;
 }
 
+.badge {
+    display: flex;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #222;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.badge p {
+    width: 50%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 4px 0px;
+}
+
+.badge p:last-of-type {
+    background-color: #eee;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 0 10px 10px 0;
+}
+
 .score {
     position: absolute;
     top: 0;
     font-size: 3rem;
     font-weight: bold;
+}
+
+.score h1 {
+    margin: .5rem;
 }
 
 #user-fist {
@@ -23,11 +51,21 @@ body {
     justify-content: flex-end;
 }
 
+#user-fist svg {
+    width: 300px;
+    height: 300px;
+}
+
 #ai-fist {
     width: 30%;
     display: flex;
     justify-content: flex-end;
     transform: rotateY(180deg);
+}
+
+#ai-fist svg {
+    width: 300px;
+    height: 300px;
 }
 
 .buttons {
@@ -119,6 +157,10 @@ body {
         font-size: 2rem;
     }
 
+    .badge {
+        font-size: 1.4rem;
+    }
+
     .button {
         padding: .5rem 1.6rem;
         font-size: 1rem;
@@ -126,6 +168,48 @@ body {
 
     #user-fist, #ai-fist {
         width: 40%;
+    }
+
+    .modal__wrapper {
+        width: 90%;
+        height: 200px;
+    }
+
+    .modal__text {
+        font-size: 1rem;
+    }
+
+    .modal__score {
+        font-size: .8rem;
+    }
+}
+
+@media (min-width: 520px) and (max-height: 520px) {
+    .score {
+        font-size: 2rem;
+    }
+
+    .badge {
+        font-size: 1.4rem;
+    }
+
+    .button {
+        padding: .5rem 1.6rem;
+        font-size: 1rem;
+    }
+
+    #user-fist, #ai-fist {
+        width: 15%;
+    }
+
+    #user-fist svg {
+        width: 120px;
+        height: 120px;
+    }
+
+    #ai-fist svg {
+        width: 120px;
+        height: 120px;
     }
 
     .modal__wrapper {
